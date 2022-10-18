@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Aquachain Authors">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>How to Host a Public RPC - Aquachain</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "How to Host a Public RPC";
+    var mkdocs_page_input_path = "node-operator-guide/how-to-public-rpc.md";
+    var mkdocs_page_url = "/docs/node-operator-guide/how-to-public-rpc/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aquachain</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About aquachain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about-aquachain/Basics/">Aquachain</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Node operator guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../ConsoleCheatcheat/">Console Cheatsheet</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../FullNode/">How to run an archive node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Node-Basics/">Full Node</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">How to Host a Public RPC</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#how-to-host-a-public-rpc">How to Host a Public RPC</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#about-public-rpc-nodes">About Public RPC Nodes</a></li>
+        
+            <li><a class="toctree-l4" href="#the-setup">The setup</a></li>
+        
+            <li><a class="toctree-l4" href="#now-customize-the-caddyfile-with-your-domain-name">Now customize the Caddyfile with your domain name</a></li>
+        
+            <li><a class="toctree-l4" href="#putting-it-all-together">Putting it all together</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Compiling/">Building from the source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Metamask/">Quick: Connect Metamask or Web3 Wallet</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Smart-Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Storage/">Storage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Wallet/">Wallet</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Ways-Acquiring/">Getting AQUA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/Whitepaper/">Whitepaper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/code-of-conduct/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User mining guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-mining-guide/Mining/">Mining</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aquachain</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Node operator guide &raquo;</li>
+        
+      
+    
+    <li>How to Host a Public RPC</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/aquachain/aquachain/blob/master/Documentation/node-operator-guide/how-to-public-rpc.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="how-to-host-a-public-rpc">How to Host a Public RPC</h1>
+<p>To set up a private RPC, run with <code>-rpc</code> flag.</p>
+<p>To set up a public RPC, follow this guide.</p>
+<h3 id="about-public-rpc-nodes">About Public RPC Nodes</h3>
+<p>The network is able to function without any public RPC nodes, but they add convenience to end-users.</p>
+<p>What they do is provide a JSON RPC over HTTP(s). Applications such as explorers and wallets can use public RPCs to fetch data and submit transactions.</p>
+<p>Public RPC Nodes do not need any private keys. They should not be on the same machine as private keys.</p>
+<p>Currently, the aquachain command doesn't use TLS/HTTPS to provide a secure RPC. For now, it is necessary to use a reverse proxy for this purpose.</p>
+<h3 id="the-setup">The setup</h3>
+<p>Here is <em>one of many</em> setups that can provide a public https endpoint, offering a public RPC for the world to use.</p>
+<ul>
+<li>For SSL (recommended), setup your subdomain DNS to your IP, before this.</li>
+<li>It is recommended to use a machine with 2GB or more RAM.</li>
+<li>Need at least 50GB disk space, recommended SSD but not necessary.</li>
+<li>Preferably a dedicated machine, such as a VPS with no other uses.</li>
+<li>A newer version of <code>caddy</code> or <code>go</code> may have arrived since this was published.</li>
+</ul>
+<p>You can follow this guide which uses a fresh VPS. The OS is Ubuntu.</p>
+<p>All commands as root user... lets go!</p>
+<pre><code># add users
+adduser --system aqua
+adduser --system caddy
+
+# install go (can skip if download aquachain binary)
+mkdir -p /root/dl
+cd /root/dl
+wget -4 'https://golang.org/dl/go1.15.6.linux-amd64.tar.gz'
+tar xvf go1.15.6*.tar.gz -C /usr/local/
+ln -s /usr/local/go/bin/* /usr/local/bin/
+
+# install caddy (reverse proxy, ssl, web server)
+cd /root/dl
+wget -4 -O /usr/local/bin/caddy 'https://caddyserver.com/api/download?os=linux&amp;arch=amd64'
+chmod +x /usr/local/bin/caddy
+setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/caddy
+
+# setup clean reboots for database health
+wget -4 -O /etc/rc0.d/K01aquachain https://github.com/aquachain/aquachain/raw/master/contrib/K01aquachain
+chmod +x /etc/rc0.d/K01aquachain
+
+# setup aquachain rpc
+cd /home/aqua
+sudo -u aqua git clone https://gitlab.com/aquachain/aquachain src/aquachain
+cd src/aquachain
+sudo -u aqua make
+mv /home/aqua/src/aquachain/bin/aquachain /usr/local/bin/aquachain
+
+# setup aqua reboot
+cat &lt;&lt;EOF &gt;/home/aqua/reboot.bash
+#!/bin/bash
+TERM=xterm
+# can modify these for example --config or something
+AQUAFLAGS=&quot;-nokeys -gcmode archive -rpc -rpccorsdomain='*' -rpcvhosts='*'&quot;
+tmux new-session -n aqua -d /usr/local/bin/aquachain $AQUAFLAGS
+EOF
+
+chmod +x /home/aqua/reboot.bash
+echo '@reboot bash /home/aqua/reboot.bash' | crontab -u aqua
+
+# setup caddy reverse proxy
+cd /home/caddy
+wget -4 https://github.com/aquachain/aquachain/raw/master/contrib/Caddyfile
+echo &quot;/usr/local/bin/caddy start&quot; &gt;&gt; /home/caddy/reboot.bash
+chmod +x /home/caddy/reboot.bash
+echo '@reboot bash /home/caddy/reboot.bash' | crontab -u caddy
+</code></pre>
+
+<h3 id="now-customize-the-caddyfile-with-your-domain-name">Now customize the Caddyfile with your domain name</h3>
+<p>Don't forget to edit /home/caddy/Caddyfile and replace the dummy domain name.</p>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+<p>Now you have a machine that will automatically launch caddy and aquachain, accepting secure requests from anyone on the internet. The machine has no keys, never uses keys, never signs anything.</p>
+<p>If this is all you are using the server for, you are probably done with your setup.</p>
+<p>Restart the VPS machine. (as root, <code>reboot</code>)</p>
+<p>Open up a terminal and run: <code>aquachain attach https://mydomain.examplename</code></p>
+<p>Use your domain name instead of the dummy name.</p>
+<p>If you get an AQUA console, you have achieved your goal, a public https rpc server..</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../user-guide/Compiling/" class="btn btn-neutral float-right" title="Building from the source">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Node-Basics/" class="btn btn-neutral" title="Full Node"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright 2022 The Aquachain Authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://gitlab.com/aquachain/aquachain/" class="icon icon-gitlab" style="float: left; color: #fcfcfc"> GitLab</a>
+      
+      
+        <span><a href="../Node-Basics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../user-guide/Compiling/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

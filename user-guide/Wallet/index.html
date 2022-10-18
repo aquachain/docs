@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Aquachain Authors">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Wallet - Aquachain</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Wallet";
+    var mkdocs_page_input_path = "user-guide/Wallet.md";
+    var mkdocs_page_url = "/docs/user-guide/Wallet/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aquachain</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About aquachain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about-aquachain/Basics/">Aquachain</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Node operator guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../node-operator-guide/ConsoleCheatcheat/">Console Cheatsheet</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node-operator-guide/FullNode/">How to run an archive node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node-operator-guide/Node-Basics/">Full Node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node-operator-guide/how-to-public-rpc/">How to Host a Public RPC</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Compiling/">Building from the source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Metamask/">Quick: Connect Metamask or Web3 Wallet</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Smart-Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Storage/">Storage</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Wallet</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#wallet">Wallet</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#metamask">Metamask</a></li>
+        
+            <li><a class="toctree-l4" href="#frame-wallet">Frame Wallet</a></li>
+        
+            <li><a class="toctree-l4" href="#full-node-wallet">Full node wallet</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Ways-Acquiring/">Getting AQUA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Whitepaper/">Whitepaper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../code-of-conduct/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User mining guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-mining-guide/Mining/">Mining</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aquachain</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User guide &raquo;</li>
+        
+      
+    
+    <li>Wallet</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/aquachain/aquachain/blob/master/Documentation/user-guide/Wallet.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="wallet">Wallet</h1>
+<p>You need to have a wallet to acquire AQUA. A Wallet provides access to your crypto which live on the AQUA blockchain aka Aquachain. This crypto is only available through your private key. If you lose this secret/private key, there is no way to recover your assets. Please safely store the wallet keys in a secure manner. Anyone with access to your private keys gains access to your crypto and can perform outward transactions. This gave birth to the famous expression “not your (private) keys, not your crypto”.</p>
+<p>Note: To safeguard your private keys, its best to use a hardware wallet instead of storing it on your device or paper. Using a hardware wallet is the most secure way of accessing your tokens because your signing key never leave the device.</p>
+<p>When you're setting up a wallet, be sure to:
+✅ Download and install only the latest version from an official source.
+✅ Follow the setup guide carefully.
+✅ Safely back up your recovery phrases.
+❌ NEVER share your recovery phrases with anyone, under any circumstances.
+❌ NEVER input your recovery phrase to a website or app, other than your wallet app.</p>
+<h2 id="metamask">Metamask</h2>
+<p>Metamask is a cryptocurrency wallet available for IOS, Android and as a Chrome extension. Once installed, create a new wallet. Make sure to securely backup your private key. Anyone with access to your private keys gains access to your crypto.
+By default, MetaMask creates a wallet on Ethereum Mainnet network. To use AQUA with MetaMask, you need to add AquaChain network. Go to Settings-&gt;Networks-&gt;Add a network and fill following fields</p>
+<pre><code>Network Name: Aquachain Mainnet
+RPC URL: https://c.onical.org (or yours)
+Chain ID: 61717561
+Symbol: AQUAC (use this to get correct cryptocompare api response)
+Block Explorer URL: https://aquachain.github.io/explorer/#/
+</code></pre>
+
+<p>After saving above network information, switch to Aquachain network and you are ready to use MetaMask with AQUA.</p>
+<p>MetaMask also supports hardware wallets such as Ledger and Trezor. See this <a href="https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet">guide</a> on how to set up MetaMask to use your hardware wallet.</p>
+<h2 id="frame-wallet">Frame Wallet</h2>
+<p>"A privacy focused Ethereum wallet that runs natively on macOS, Windows and Linux"</p>
+<p>Get here <a href="https://frame.sh">frame.sh</a> and <a href="https://github.com/floating/frame/releases">frame releases</a></p>
+<p>Configure same as metamask above</p>
+<h2 id="full-node-wallet">Full node wallet</h2>
+<h3 id="advanced-mode">Advanced mode</h3>
+<p>Such usecases for a full node wallet include:
+  * if you wish to programmatically sending transactions using <code>personal_sendTransaction</code> 
+  * if you only want to use wallet through the secure console wallet</p>
+<p>Both situations require a secure network, and are for advanced users only. Consider using a common wallet.</p>
+<p><em>If you use a JSON Keyfile wallet attached to your node, you MUST take safety precautions.</em></p>
+<p>It is BETTER to use <code>eth_sendRawTransaction</code> to submit a signed transaction, and keep your key away from your RPC node.</p>
+<p>Anyone can set up complex private aquachain networks with multiple nodes, some with keys, some without, and transactions will be broadcast to the main network if at least one of the nodes are connected to the "world". Consider keeping your signing node "offline" if possible, and use <code>personal_signTransaction</code> which returns a signed tx without broadcasting it.</p>
+<p><strong>You do NOT need a private key to run an aquachain node</strong></p>
+<p>But, a password-protected JSON keyfile is perfectly safe if kept secured, and securely backed up.
+The most common issue with this type of wallet is that it can't be easily written down in its current form.
+Most users will probably want to NOT use this, and instead use a mnemonic phrase.</p>
+<h3 id="generating-new-console-wallet">Generating new console wallet</h3>
+<p>A wallet can be generated in three ways from the aquachain command:</p>
+<ul>
+<li><code>aquachain.exe account new</code></li>
+<li><code>aquachain.exe paper 10</code></li>
+<li>in the AQUA Console: <code>personal.newAccount()</code></li>
+</ul>
+<h3 id="send-a-transaction">Send a transaction</h3>
+<p>Start a transaction by typing <code>send</code> and press enter (type <code>n</code> or <code>ctrl+c</code> to cancel)</p>
+<h3 id="most-important-commands">Most important commands</h3>
+<p>Check balance with <code>aqua.balance(aqua.coinbase)</code></p>
+<p>Check all accounts balances: <code>balance()</code></p>
+<p>Send a transaction (easy way): <code>send</code></p>
+<p>Also see the <a href="../../node-operator-guide/ConsoleCheatcheat/">Console Cheatsheet</a> and other node-operator-guide resources, since you operate a node.</p>
+<h3 id="example-sending-a-transaction-the-hard-way">Example: Sending a transaction the hard way</h3>
+<p>Before sending coins, you must unlock the account:</p>
+<p><code>personal.unlockAccount(aqua.accounts[0])</code></p>
+<p>This next command will send 2 AQUA from "account 0" (first account created) to the typed account below:</p>
+<pre><code>aqua.sendTransaction({from: aqua.accounts[0], to: '0x3317e8405e75551ec7eeeb3508650e7b349665ff', value:web3.toWei(2,&quot;aqua&quot;)});
+</code></pre>
+
+<p>Since its a javascript console, you can do something like this:</p>
+<pre><code>var destination = '0x3317e8405e75551ec7eeeb3508650e7b349665ff';
+aqua.sendTransaction({from: aqua.accounts[0], to: destination, value:web3.toWei(2,&quot;aqua&quot;)});
+</code></pre>
+
+<p>Default gas price is 0.1 gwei, if you want to specify a higher gas price you can add it to the tx:</p>
+<pre><code>var tx = {from: aqua.accounts[0], to: destination, gasPrice: web3.toWei(20, &quot;gwei&quot;), value:web3.toWei(2,&quot;aqua&quot;)};
+aqua.sendTransaction(tx);
+</code></pre>
+
+<h3 id="useful-console-commands">Useful Console Commands</h3>
+<p>(Save time! Press tab twice to auto-complete everything.)</p>
+<pre><code>balance()
+aqua.balance(aqua.coinbase)
+send
+admin.nodeInfo.enode
+net.listening
+net.peerCount
+admin.peers
+aqua.coinbase
+aqua.getBalance(aqua.coinbase)
+personal
+aqua.accounts
+miner.setAquabase(web3.aqua.accounts[0])
+miner.setAquabase(“0x0000000000000000000000000000000000000000”)
+miner.start()
+miner.stop()
+miner.hashrate
+aqua.getBlock(0)
+aqua.getBlock(“latest”)
+aqua.blockNumber
+web3.aqua.getBlock(BLOCK_NUMBER).hash
+aqua.syncing
+debug.verbosity(6) // highest logging level, 3 is default
+</code></pre>
+
+<h3 id="import-private-key">Import Private Key</h3>
+<p>If you created a wallet with <code>aquachain.exe paper</code> or <code>aquachain wallet</code> you will have an unprotected private key. To send coins from the account derived from this key, you must import it into the console.</p>
+<p>to import a private key into the aquachain console:</p>
+<p>prepare your private key as a <strong>simple text file with no spaces</strong>. name it anything.txt for example</p>
+<p>run <code>aquachain.exe account import anything.txt</code></p>
+<p><b>make sure to delete/shred the private key txt file!!!</b></p>
+<h3 id="backup-private-key">Backup Private Key</h3>
+<p>Running <code>aquachain account list</code> will list all key locations. Simply copy these files and check that directory.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Ways-Acquiring/" class="btn btn-neutral float-right" title="Getting AQUA">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Storage/" class="btn btn-neutral" title="Storage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright 2022 The Aquachain Authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://gitlab.com/aquachain/aquachain/" class="icon icon-gitlab" style="float: left; color: #fcfcfc"> GitLab</a>
+      
+      
+        <span><a href="../Storage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Ways-Acquiring/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
