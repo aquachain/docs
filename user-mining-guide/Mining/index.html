@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Aquachain Authors" /><link rel="canonical" href="https://aquachain.github.io/docs/user-mining-guide/Mining/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Mining - Aquachain</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Mining";
+        var mkdocs_page_input_path = "user-mining-guide/Mining.md";
+        var mkdocs_page_url = "/docs/user-mining-guide/Mining/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Aquachain
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About aquachain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about-aquachain/Basics/">Aquachain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Node operator guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../node-operator-guide/ConsoleCheatcheat/">Console Cheatsheet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../node-operator-guide/FullNode/">How to run an archive node</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../node-operator-guide/Node-Basics/">Full Node</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../node-operator-guide/how-to-public-rpc/">How to Host a Public RPC</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Compiling/">Building from the source</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Metamask/">Quick: Connect Metamask or Web3 Wallet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Smart-Contracts/">Smart Contracts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Wallet/">Wallet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Ways-Acquiring/">Getting AQUA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/Whitepaper/">Whitepaper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/code-of-conduct/">Code of conduct</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User mining guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Mining</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#hashrate-benchmarks">Hashrate Benchmarks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#new-mining-software">New Mining Software</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aquachain-miner-resources">Aquachain Miner Resources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pool-mining">Pool mining</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pools">Pools</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#solo-mining">Solo mining:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solo-farm">Solo farm</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Aquachain</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User mining guide</li>
+      <li class="breadcrumb-item active">Mining</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://gitlab.com/aquachain/aquachain/blob/master/Documentation/user-mining-guide/Mining.md" class="icon icon-gitlab"> Edit on GitLab</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mining">Mining</h1>
+<h2 id="hashrate-benchmarks">Hashrate Benchmarks</h2>
+<p>See <code>#hashrate-reports</code> channel for many more: <a href="https://discord.com/invite/J7jBhZf">discord</a></p>
+<h2 id="new-mining-software">New Mining Software</h2>
+<p>There are many varieties of aquachain mining software.</p>
+<p>As of this edit, latest is <a href="https://github.com/aquachain/aquaminer-gpu">aquaminer-gpu</a></p>
+<p>Compiling is easy.</p>
+<pre><code>git clone --branch linux --recurse-submodules https://github.com/aquachain/aquaminer-gpu
+cd aquaminer-gpu
+make
+ls bin/
+</code></pre>
+<p>Running all the miners are generally the same. The <code>-F</code> flag and then the pool URL, or your node URL if solo mining.</p>
+<h2 id="aquachain-miner-resources">Aquachain Miner Resources</h2>
+<ul>
+<li><a href="https://aquacha.in/status/miners">Network Pool Status</a></li>
+</ul>
+<h2 id="pool-mining">Pool mining</h2>
+<p>Choose a pool from those listed on <a href="https://aquacha.in/status/miners">pool status</a> or <a href="https://aquachain.github.io/explorer/#/pool">aquachain.github.io</a></p>
+<p>Run the miner with the correct flags, considering making a short script</p>
+<p><code>./aquaminer.exe -F http://&lt;pooladdress&gt;:8888/&lt;address&gt;/&lt;worker&gt;</code></p>
+<p>Here replace <code>&lt;address&gt;</code> with your wallet address and <code>&lt;worker&gt;</code> with any custom name for the CPU you are using with your address. Remember multiple workers can be used with a single wallet address and in this case all paid money will go to the same wallet. And swap <code>&lt;pooladdress&gt;</code> for the actual pool host.</p>
+<p>For CPU, use <code>-t</code> flag for number of cpu (default all)</p>
+<p><code>./aquaminer.exe -F http://pool.aquachain-foundation.org:8888/&lt;address&gt;/&lt;worker&gt;</code></p>
+<p>For GPU, use <code>-d</code> flag to choose the OpenCL device number
+  <code>pooladdr='http://pool.whatever:8888/&lt;address&gt;/&lt;worker&gt;'
+  ./aquacppminer-gpu -d 0 -F ${pooladdr} &amp;
+  ./aquacppminer-gpu -d 1 -F ${pooladdr} &amp;</code>
+Since these are now running in background, use something like "killall aquacppminer-gpu" to kill all the miners.</p>
+<h3 id="pools">Pools</h3>
+<p>These are the currently known pools, edit to add more: <a href="https://github.com/aquachain/aquachain.github.io/blob/master/pools.json">pools.json</a></p>
+<p><a href="https://aquachain.github.io/explorer/#/pool">aquachain explorer: pools</a></p>
+<p><a href="https://info.aquacha.in/status/miners">multipool status</a></p>
+<h2 id="solo-mining">Solo mining:</h2>
+<ul>
+<li>
+<p><strong>Don't solo mine unless you can actually mine blocks once in a while, start at a pool</strong></p>
+</li>
+<li>
+<p><strong>Dont keep your keys on your RPC server</strong></p>
+</li>
+<li>
+<p><strong>Use the <code>-aquabase</code> flag to set coinbase with no private key on server</strong></p>
+</li>
+</ul>
+<p>Be sure to <strong>wait and sync before mining</strong>. It doesn't take long.</p>
+<p>To reduce orphan blocks, also be sure to <strong>have peers</strong> and check a block explorer to see the current block number and hash.</p>
+<p>Do not key any keys inside the "nokeys" directory. You can safely delete <code>aquaminingdata</code> and <code>nokeys</code> (make sure you dont keep keys in there!)</p>
+<p><strong>Run your RPC server like so: <code>aquachain -rpc -rpcaddr 192.168.1.5 -datadir aquaminingdata -keystore nokeys -aquabase 0x3317e8405e75551ec7eeeb3508650e7b349665ff</code></strong></p>
+<p>Later, to spend and use the AQUA console, just double click aquachain. This way, you keep your keys safe (in the default keystore dir) and don't mix <code>datadir</code>, this can prevent RPC attacks.</p>
+<p>Please see the many cases where people have lost their ETH because leaving RPC open for even one minute.</p>
+<h3 id="solo-farm">Solo farm</h3>
+<p>This assumes your AQUA node will be running from LAN 192.168.1.3, with other workers on the same lan.</p>
+<p>WORKERS: <code>aquacppminer --solo -F http://192.168.1.3:8543/</code></p>
+<p>Also consider running a pool! <a href="https://github.com/aquachain/open-aquachain-pool/blob/master/docs/TUTORIAL.md">open-aquachain-pool</a></p>
+<p>and see mining proxy: <a href="https://github.com/rplant8/aquachain-proxy">aquachain-proxy</a></p>
+<p><strong>Coinbase</strong></p>
+<p>This is the address that receives the block reward. The mining node does not need the key.</p>
+<p>Use the <code>-aquabase</code> flag, or from console:</p>
+<pre><code>miner.setAquabase('0x.your address..')
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../user-guide/code-of-conduct/" class="btn btn-neutral float-left" title="Code of conduct"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright 2022 The Aquachain Authors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/aquachain/aquachain" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+      <span><a href="../../user-guide/code-of-conduct/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
